@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F2546C670BA562A63DC03CA /* Pods_DahuaPoints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DE7606D0DEE3BFCAC85A5B /* Pods_DahuaPoints.framework */; };
+		2B93541A1E447EF300812200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9354191E447EF300812200 /* AppDelegate.swift */; };
+		2B93541C1E447EF300812200 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93541B1E447EF300812200 /* ViewController.swift */; };
+		2B93541F1E447EF300812200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B93541D1E447EF300812200 /* Main.storyboard */; };
+		2B9354211E447EF300812200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B9354201E447EF300812200 /* Assets.xcassets */; };
+		2B9354241E447EF300812200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B9354221E447EF300812200 /* LaunchScreen.storyboard */; };
+		2B93542F1E447EF300812200 /* DahuaPointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93542E1E447EF300812200 /* DahuaPointsTests.swift */; };
+		2B93543A1E447EF300812200 /* DahuaPointsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9354391E447EF300812200 /* DahuaPointsUITests.swift */; };
+		2B93544B1E44859600812200 /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93544A1E44859600812200 /* NetManager.swift */; };
+		2B93544D1E4490FF00812200 /* DahuaPointsMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93544C1E4490FF00812200 /* DahuaPointsMgr.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B93542B1E447EF300812200 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B93540E1E447EF300812200 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B9354151E447EF300812200;
+			remoteInfo = DahuaPoints;
+		};
+		2B9354361E447EF300812200 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B93540E1E447EF300812200 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B9354151E447EF300812200;
+			remoteInfo = DahuaPoints;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B9354161E447EF300812200 /* DahuaPoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DahuaPoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B9354191E447EF300812200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B93541B1E447EF300812200 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B93541E1E447EF300812200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B9354201E447EF300812200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B9354231E447EF300812200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B9354251E447EF300812200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B93542A1E447EF300812200 /* DahuaPointsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DahuaPointsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B93542E1E447EF300812200 /* DahuaPointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DahuaPointsTests.swift; sourceTree = "<group>"; };
+		2B9354301E447EF300812200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B9354351E447EF300812200 /* DahuaPointsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DahuaPointsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B9354391E447EF300812200 /* DahuaPointsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DahuaPointsUITests.swift; sourceTree = "<group>"; };
+		2B93543B1E447EF300812200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B93544A1E44859600812200 /* NetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetManager.swift; path = Net/NetManager.swift; sourceTree = "<group>"; };
+		2B93544C1E4490FF00812200 /* DahuaPointsMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DahuaPointsMgr.swift; path = Manager/DahuaPointsMgr.swift; sourceTree = "<group>"; };
+		8947BE12D554598B2A5D2996 /* Pods-DahuaPoints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DahuaPoints.release.xcconfig"; path = "Pods/Target Support Files/Pods-DahuaPoints/Pods-DahuaPoints.release.xcconfig"; sourceTree = "<group>"; };
+		91DE7606D0DEE3BFCAC85A5B /* Pods_DahuaPoints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DahuaPoints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA17F0120813E55AE4BA8109 /* Pods-DahuaPoints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DahuaPoints.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DahuaPoints/Pods-DahuaPoints.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B9354131E447EF300812200 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F2546C670BA562A63DC03CA /* Pods_DahuaPoints.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B9354271E447EF300812200 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B9354321E447EF300812200 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B93540D1E447EF300812200 = {
+			isa = PBXGroup;
+			children = (
+				2B9354181E447EF300812200 /* DahuaPoints */,
+				2B93542D1E447EF300812200 /* DahuaPointsTests */,
+				2B9354381E447EF300812200 /* DahuaPointsUITests */,
+				2B9354171E447EF300812200 /* Products */,
+				D0355D9DEAAEA903DE0ED933 /* Pods */,
+				388808132F6CC87DE585C7DC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2B9354171E447EF300812200 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B9354161E447EF300812200 /* DahuaPoints.app */,
+				2B93542A1E447EF300812200 /* DahuaPointsTests.xctest */,
+				2B9354351E447EF300812200 /* DahuaPointsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B9354181E447EF300812200 /* DahuaPoints */ = {
+			isa = PBXGroup;
+			children = (
+				2B9354491E44839000812200 /* Net */,
+				2B9354471E44835200812200 /* Manager */,
+				2B9354191E447EF300812200 /* AppDelegate.swift */,
+				2B93541B1E447EF300812200 /* ViewController.swift */,
+				2B93541D1E447EF300812200 /* Main.storyboard */,
+				2B9354201E447EF300812200 /* Assets.xcassets */,
+				2B9354221E447EF300812200 /* LaunchScreen.storyboard */,
+				2B9354251E447EF300812200 /* Info.plist */,
+			);
+			path = DahuaPoints;
+			sourceTree = "<group>";
+		};
+		2B93542D1E447EF300812200 /* DahuaPointsTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B93542E1E447EF300812200 /* DahuaPointsTests.swift */,
+				2B9354301E447EF300812200 /* Info.plist */,
+			);
+			path = DahuaPointsTests;
+			sourceTree = "<group>";
+		};
+		2B9354381E447EF300812200 /* DahuaPointsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B9354391E447EF300812200 /* DahuaPointsUITests.swift */,
+				2B93543B1E447EF300812200 /* Info.plist */,
+			);
+			path = DahuaPointsUITests;
+			sourceTree = "<group>";
+		};
+		2B9354471E44835200812200 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2B93544C1E4490FF00812200 /* DahuaPointsMgr.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		2B9354491E44839000812200 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				2B93544A1E44859600812200 /* NetManager.swift */,
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
+		388808132F6CC87DE585C7DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91DE7606D0DEE3BFCAC85A5B /* Pods_DahuaPoints.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0355D9DEAAEA903DE0ED933 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA17F0120813E55AE4BA8109 /* Pods-DahuaPoints.debug.xcconfig */,
+				8947BE12D554598B2A5D2996 /* Pods-DahuaPoints.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B9354151E447EF300812200 /* DahuaPoints */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B93543E1E447EF300812200 /* Build configuration list for PBXNativeTarget "DahuaPoints" */;
+			buildPhases = (
+				9A1DADF0C6535F99798A35EA /* [CP] Check Pods Manifest.lock */,
+				2B9354121E447EF300812200 /* Sources */,
+				2B9354131E447EF300812200 /* Frameworks */,
+				2B9354141E447EF300812200 /* Resources */,
+				977EDDC33BAF9E47CF0924D0 /* [CP] Embed Pods Frameworks */,
+				23D5B5364CBCDC4AD6000409 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DahuaPoints;
+			productName = DahuaPoints;
+			productReference = 2B9354161E447EF300812200 /* DahuaPoints.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B9354291E447EF300812200 /* DahuaPointsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B9354411E447EF300812200 /* Build configuration list for PBXNativeTarget "DahuaPointsTests" */;
+			buildPhases = (
+				2B9354261E447EF300812200 /* Sources */,
+				2B9354271E447EF300812200 /* Frameworks */,
+				2B9354281E447EF300812200 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B93542C1E447EF300812200 /* PBXTargetDependency */,
+			);
+			name = DahuaPointsTests;
+			productName = DahuaPointsTests;
+			productReference = 2B93542A1E447EF300812200 /* DahuaPointsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B9354341E447EF300812200 /* DahuaPointsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B9354441E447EF300812200 /* Build configuration list for PBXNativeTarget "DahuaPointsUITests" */;
+			buildPhases = (
+				2B9354311E447EF300812200 /* Sources */,
+				2B9354321E447EF300812200 /* Frameworks */,
+				2B9354331E447EF300812200 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B9354371E447EF300812200 /* PBXTargetDependency */,
+			);
+			name = DahuaPointsUITests;
+			productName = DahuaPointsUITests;
+			productReference = 2B9354351E447EF300812200 /* DahuaPointsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B93540E1E447EF300812200 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = 5icpp.com;
+				TargetAttributes = {
+					2B9354151E447EF300812200 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Z63APZ72SR;
+						ProvisioningStyle = Automatic;
+					};
+					2B9354291E447EF300812200 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2B9354151E447EF300812200;
+					};
+					2B9354341E447EF300812200 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2B9354151E447EF300812200;
+					};
+				};
+			};
+			buildConfigurationList = 2B9354111E447EF300812200 /* Build configuration list for PBXProject "DahuaPoints" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B93540D1E447EF300812200;
+			productRefGroup = 2B9354171E447EF300812200 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B9354151E447EF300812200 /* DahuaPoints */,
+				2B9354291E447EF300812200 /* DahuaPointsTests */,
+				2B9354341E447EF300812200 /* DahuaPointsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B9354141E447EF300812200 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B9354241E447EF300812200 /* LaunchScreen.storyboard in Resources */,
+				2B9354211E447EF300812200 /* Assets.xcassets in Resources */,
+				2B93541F1E447EF300812200 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B9354281E447EF300812200 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B9354331E447EF300812200 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23D5B5364CBCDC4AD6000409 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DahuaPoints/Pods-DahuaPoints-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		977EDDC33BAF9E47CF0924D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DahuaPoints/Pods-DahuaPoints-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A1DADF0C6535F99798A35EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B9354121E447EF300812200 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B93541C1E447EF300812200 /* ViewController.swift in Sources */,
+				2B93544D1E4490FF00812200 /* DahuaPointsMgr.swift in Sources */,
+				2B93544B1E44859600812200 /* NetManager.swift in Sources */,
+				2B93541A1E447EF300812200 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B9354261E447EF300812200 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B93542F1E447EF300812200 /* DahuaPointsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B9354311E447EF300812200 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B93543A1E447EF300812200 /* DahuaPointsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B93542C1E447EF300812200 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B9354151E447EF300812200 /* DahuaPoints */;
+			targetProxy = 2B93542B1E447EF300812200 /* PBXContainerItemProxy */;
+		};
+		2B9354371E447EF300812200 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B9354151E447EF300812200 /* DahuaPoints */;
+			targetProxy = 2B9354361E447EF300812200 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B93541D1E447EF300812200 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B93541E1E447EF300812200 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B9354221E447EF300812200 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B9354231E447EF300812200 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B93543C1E447EF300812200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B93543D1E447EF300812200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B93543F1E447EF300812200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA17F0120813E55AE4BA8109 /* Pods-DahuaPoints.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z63APZ72SR;
+				INFOPLIST_FILE = DahuaPoints/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.5icpp.DahuaPoints;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2B9354401E447EF300812200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8947BE12D554598B2A5D2996 /* Pods-DahuaPoints.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z63APZ72SR;
+				INFOPLIST_FILE = DahuaPoints/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.5icpp.DahuaPoints;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2B9354421E447EF300812200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DahuaPointsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.5icpp.DahuaPointsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DahuaPoints.app/DahuaPoints";
+			};
+			name = Debug;
+		};
+		2B9354431E447EF300812200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DahuaPointsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.5icpp.DahuaPointsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DahuaPoints.app/DahuaPoints";
+			};
+			name = Release;
+		};
+		2B9354451E447EF300812200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = DahuaPointsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.5icpp.DahuaPointsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DahuaPoints;
+			};
+			name = Debug;
+		};
+		2B9354461E447EF300812200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = DahuaPointsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.5icpp.DahuaPointsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DahuaPoints;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B9354111E447EF300812200 /* Build configuration list for PBXProject "DahuaPoints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B93543C1E447EF300812200 /* Debug */,
+				2B93543D1E447EF300812200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B93543E1E447EF300812200 /* Build configuration list for PBXNativeTarget "DahuaPoints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B93543F1E447EF300812200 /* Debug */,
+				2B9354401E447EF300812200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B9354411E447EF300812200 /* Build configuration list for PBXNativeTarget "DahuaPointsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9354421E447EF300812200 /* Debug */,
+				2B9354431E447EF300812200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B9354441E447EF300812200 /* Build configuration list for PBXNativeTarget "DahuaPointsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9354451E447EF300812200 /* Debug */,
+				2B9354461E447EF300812200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B93540E1E447EF300812200 /* Project object */;
+}
