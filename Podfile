@@ -8,7 +8,7 @@ inhibit_all_warnings!
 target 'DahuaPoints' do
 	# Swift 3
 	pod 'Alamofire'
-	pod 'Moya', '~> 8.0'
+    pod 'Moya/RxSwift'
 	pod 'ObjectMapper', '~> 2.2'
 
 end

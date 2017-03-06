@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,9 +25,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NP-3X-UEb">
                                 <rect key="frame" x="172" y="118" width="30" height="30"/>
                                 <state key="normal" title="Get"/>
+                                <connections>
+                                    <action selector="clickGet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bwq-O0-cL5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通用点数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxf-oo-UTr">
-                                <rect key="frame" x="41" y="178" width="70" height="21"/>
+                                <rect key="frame" x="26" y="178" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="寄售点数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hV-9Q-eWJ">
-                                <rect key="frame" x="41" y="240" width="70" height="21"/>
+                                <rect key="frame" x="26" y="240" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="专用点数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC6-8r-GAy">
-                                <rect key="frame" x="41" y="301" width="70" height="21"/>
+                                <rect key="frame" x="26" y="301" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,13 +91,18 @@
                             <constraint firstItem="YZ1-uV-E1s" firstAttribute="width" secondItem="cSS-6U-ZGf" secondAttribute="width" id="YbA-Ts-rfK"/>
                             <constraint firstItem="4T7-Ac-Duf" firstAttribute="top" secondItem="zxf-oo-UTr" secondAttribute="top" id="YgC-35-RU9"/>
                             <constraint firstItem="YZ1-uV-E1s" firstAttribute="leading" secondItem="cSS-6U-ZGf" secondAttribute="leading" id="gGl-cC-dNe"/>
-                            <constraint firstItem="zxf-oo-UTr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="iam-MJ-Qel"/>
+                            <constraint firstItem="zxf-oo-UTr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="iam-MJ-Qel"/>
                             <constraint firstItem="CC6-8r-GAy" firstAttribute="leading" secondItem="1hV-9Q-eWJ" secondAttribute="leading" id="lgm-Xb-71Z"/>
                             <constraint firstItem="1hV-9Q-eWJ" firstAttribute="top" secondItem="zxf-oo-UTr" secondAttribute="bottom" constant="41" id="pb4-Wf-K1j"/>
                             <constraint firstItem="cSS-6U-ZGf" firstAttribute="leading" secondItem="4T7-Ac-Duf" secondAttribute="leading" id="uZG-1w-R0G"/>
                             <constraint firstItem="cSS-6U-ZGf" firstAttribute="width" secondItem="4T7-Ac-Duf" secondAttribute="width" id="yqX-lQ-qrp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customLabel" destination="zxf-oo-UTr" id="B2t-bB-YAE"/>
+                        <outlet property="jishou" destination="1hV-9Q-eWJ" id="rpV-cC-iIz"/>
+                        <outlet property="tmpVertical" destination="MPG-lJ-LOh" id="Xy5-5J-9QI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
