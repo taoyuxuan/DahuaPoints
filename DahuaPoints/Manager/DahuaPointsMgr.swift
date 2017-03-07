@@ -23,7 +23,7 @@ class DahuaPointsMgr {
                 case .success(let response):
                     do {
                         let str = try response.mapString()
-                        let iniRet =
+//                        let iniRet =
                     } catch {
                         print(error)
                     }
@@ -32,7 +32,7 @@ class DahuaPointsMgr {
                 }
             })
             
-            ecard163ContentProvider.request(, completion: <#T##Completion##Completion##(Result<Response, MoyaError>) -> Void#>)
+//            ecard163ContentProvider.request(, completion: <#T##Completion##Completion##(Result<Response, MoyaError>) -> Void#>)
             
             getStartCookie { cookie in
                 // get tmp cookie
