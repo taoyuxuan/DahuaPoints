@@ -10,7 +10,7 @@ import Foundation
 
 class EncryptUtil {
     class func value(data: String) -> String? {
-        
+        return nil
     }
     
     class func parse(data: String?) -> String? {
@@ -25,10 +25,18 @@ class EncryptUtil {
             }
             var t = data.substring(from: data.index(data.startIndex, offsetBy: 1))
             var n = 0
+            guard let tmpT = t.utf16.first else {
+                return nil
+            }
             if 5 == (31 & i) {
-                t = t.substring(from: <#T##String.Index#>)
+                t = t.substring(from: data.index(data.startIndex, offsetBy: 1))
+            } else if (128 & tmpT) {
+                var r = 127 & tmpT
+                
             }
 //            t = 
         }
+        
+        return nil
     }
 }

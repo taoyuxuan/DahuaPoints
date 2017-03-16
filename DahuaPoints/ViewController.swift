@@ -38,11 +38,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
-    
-    
     @IBAction func clickGet(_ sender: Any) {
         DahuaPointsMgr.GetPoints(accounts: ["xf568816788@163.com":"xiaofeng.com"])
     }
