@@ -9,38 +9,39 @@
 import Foundation
 
 class EncryptUtil {
-    class func value(t: UInt16, e: String) -> String? {
+    class func value(t: UInt16, e: String) -> [Any]? {
 		if 1 == t {
-			return e ? 1 : 0
+			return e != "" ? ["1"] : ["0"]
 		} else if 2 == t {
-			return e
+			return [e]
 		} else if 3 == t {
-			reutn parse(e.substring(from: e.index(e.startIndex, offsetBy: 1)))
+			return parse(data: e.substring(from: e.index(e.startIndex, offsetBy: 1)))
 		} else if 5 == t {
 			return nil
 		} else if 6 == t {
 			var i: [UInt16] = []
 			guard let tmpN = e.utf16.first else {
-				reutn nil
+				return nil
 			}
-			var n = tmpN
-			i.append(Math.floor(n/40))
+			let n = tmpN
+			i.append(UInt16(floor(Double(n)/40.0)))
 			i.append(n - 40*i[0])
 			var r: [UInt16] = []
 			var s = 0
-			var o = 1
-			for o in i..<e.characters.count {
+			for o in 1..<e.characters.count {
 				let tmpArr = Array(e.utf16)
 				if tmpArr.count <= o {
 					return nil
 				}
-				var a = tmpArr[o]
+				let a = tmpArr[o]
 				r.append(127&a)
-				if 128&a {
+				if 128&a > 0 {
 					s += 1
 				} else {
-					for index in 0...<r.count {
-						c += r[index]*Math.pow(128, s-1)
+                    var c: UInt16 = 0
+					for index in 0..<r.count {
+                        let powResult = NSDecimalNumber(decimal: pow(128, s-1))
+						c += r[index] * UInt16(powResult)
 						s = s - 1
 					}
 					i.append(c)
@@ -48,29 +49,29 @@ class EncryptUtil {
 					r = []
 				}
 			}
-			return i.joined(".")
+            return [i.map({ String($0)}).joined(separator: ".")]
 		}
         return nil
     }
     
-    class func parse(data: String?) -> String? {
-        guard let data = data else {
+    class func parse(data: String?) -> [Any]? {
+        guard let t = data else {
             return nil
         }
 
-        var e: [String] = []
-        while data.characters.count > 0 {
-            guard let i: UInt16 = data.utf16.first else {
+        var e: [Any] = []
+        while t.characters.count > 0 {
+            guard let i: UInt16 = t.utf16.first else {
                 return nil
             }
-            var t = data.substring(from: data.index(data.startIndex, offsetBy: 1))
-            var n = 0
+            var t = t.substring(from: t.index(t.startIndex, offsetBy: 1))
+            var n: UInt16 = 0
             guard let tmpT: UInt16 = t.utf16.first else {
                 return nil
             }
             if 5 == (31 & i) {
                 t = t.substring(from: t.index(t.startIndex, offsetBy: 1))
-            } else if (128 & tmpT) {
+            } else if (128 & tmpT > 0) {
                 var r: UInt16 = 127 & tmpT
                 t = t.substring(from: t.index(t.startIndex, offsetBy: 1))
 				if r > 0 {
@@ -80,15 +81,12 @@ class EncryptUtil {
 					n = tmpN
 				} 
 				if r > 1 {
-					guard let tmpN = Array(t.utf16)[1] else {
-						return nil
-					}
-					n = (n<<8 | tmpN)
+					n = (n<<8 | Array(t.utf16)[1])
 				}
 				if r > 2 {
 					return nil
 				}
-				t = t.substring(from: t.index(t.startIndex, offsetBy: r))
+				t = t.substring(from: t.index(t.startIndex, offsetBy: Int(r)))
             } else {
 				guard let tmpN = t.utf16.first else {
 					return nil
@@ -98,19 +96,38 @@ class EncryptUtil {
 			}
 			var s = ""
 			if n > 0 {
-				if n > t.characters.count {
+				if n > UInt16(t.characters.count) {
 					return nil
 				}
-				s = t.substring(with: Range<String.Index>(start: t.startIndex, end: t.index(t.startIndex, offsetBy: n)))
-				t = t.substring(from: t.index(t.startIndex, offsetBy: n))
+                let range = t.startIndex..<t.index(t.startIndex, offsetBy: String.IndexDistance(n+1))
+				s = t.substring(with: range)
+				t = t.substring(from: t.index(t.startIndex, offsetBy: String.IndexDistance(n)))
 			}
-			if 32&i {
-				e.append(parse(data: s))
+			if UInt16(32)&i > 0 {
+                if let element = parse(data: s) {
+                    e.append(contentsOf: element)
+                }
 			} else {
-				e.append(value(128&i ? 4 : 31&i, s))
+                var param: UInt16 = 31&i
+                if 128&i != 0 {
+                    param = 4
+                }
+                if let result = value(t: param, e: s) {
+                    e.append(contentsOf: result)
+                }
 			}
         }
         
         return e
+    }
+    
+    class func base64Decode(string: String) -> String? {
+        let data = string.data(using: String.Encoding.utf8)?.base64EncodedData(options: NSData.Base64EncodingOptions(rawValue: 0))
+        
+        guard let param = data else {
+            return nil
+        }
+        
+        return String(data: param, encoding: String.Encoding.utf8)
     }
 }

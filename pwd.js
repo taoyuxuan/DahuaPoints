@@ -84,7 +84,8 @@ var RSA = {
         t = new ASN1Data(Base64.decode(t));
         if (t.error) return !1;
         t = t.data;
-        if ("1.2.840.113549.1.1.1" == t[0][0][0]) return new RSAPublicKey(t[0][1][0][0], t[0][1][0][1]);
+        if ("1.2.840.113549.1.1.1" == t[0][0][0]) 
+            return new RSAPublicKey(t[0][1][0][0], t[0][1][0][1]);
         else return !1 
     }, encrypt: function(t, e) {
         if (!e) return !1;
