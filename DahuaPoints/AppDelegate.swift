@@ -111,8 +111,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    
 //}
 
-
-
+extension AppDelegate {
+    func testPng() {
+        do {
+            if let image = UIImage(named:"123") {
+                let data = UIImageJPEGRepresentation(image, 0.5)
+                let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                let path_new = path.appendingPathComponent("123.png")
+                if let data = data {
+                    try data.write(to: path_new, options:NSData.WritingOptions.atomic)
+                }
+            }
+        } catch {
+            print(error)
+        }
+    }
+}
 
 
 
