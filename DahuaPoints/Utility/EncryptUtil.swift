@@ -55,24 +55,25 @@ class EncryptUtil {
     }
     
     class func parse(data: String?) -> [Any]? {
-        guard let t = data else {
+        guard let data = data else {
             return nil
         }
 
+        var t = data
         var e: [Any] = []
         while t.characters.count > 0 {
             guard let i: UInt16 = t.utf16.first else {
                 return nil
             }
-            var t = t.substring(from: t.index(t.startIndex, offsetBy: 1))
+            t = t.substring(from: t.index(t.startIndex, offsetBy: 1))
             var n: UInt16 = 0
             guard let tmpT: UInt16 = t.utf16.first else {
                 return nil
             }
             if 5 == (31 & i) {
                 t = t.substring(from: t.index(t.startIndex, offsetBy: 1))
-            } else if (128 & tmpT > 0) {
-                var r: UInt16 = 127 & tmpT
+            } else if ((128 & tmpT) != 0) {
+                let r: UInt16 = 127 & tmpT
                 t = t.substring(from: t.index(t.startIndex, offsetBy: 1))
 				if r > 0 {
 					guard let tmpN = t.utf16.first else {
@@ -95,15 +96,15 @@ class EncryptUtil {
 				t = t.substring(from: t.index(t.startIndex, offsetBy: 1))
 			}
 			var s = ""
-			if n > 0 {
+			if n != 0 {
 				if n > UInt16(t.characters.count) {
 					return nil
 				}
-                let range = t.startIndex..<t.index(t.startIndex, offsetBy: String.IndexDistance(n+1))
+                let range = t.startIndex..<t.index(t.startIndex, offsetBy: String.IndexDistance(n))
 				s = t.substring(with: range)
 				t = t.substring(from: t.index(t.startIndex, offsetBy: String.IndexDistance(n)))
 			}
-			if UInt16(32)&i > 0 {
+			if UInt16(32)&i != 0 {
                 if let element = parse(data: s) {
                     e.append(contentsOf: element)
                 }
@@ -122,12 +123,17 @@ class EncryptUtil {
     }
     
     class func base64Decode(string: String) -> String? {
-        let data = string.data(using: String.Encoding.utf8)?.base64EncodedData(options: NSData.Base64EncodingOptions(rawValue: 0))
+//        let data = string.data(using: String.Encoding.utf8)?.base64EncodedData(options: NSData.Base64EncodingOptions(rawValue: 0))
+//        
+//        guard let param = data else {
+//            return nil
+//        }
+//        
+//        return String(data: param, encoding: String.Encoding.utf8)
+        let decodedData = NSData(base64Encoded: string, options: .init(rawValue: 0))
+
+        let decodedString = NSString(data: decodedData as! Data, encoding: String.Encoding.utf8.rawValue)
         
-        guard let param = data else {
-            return nil
-        }
-        
-        return String(data: param, encoding: String.Encoding.utf8)
+        return decodedString as? String
     }
 }
