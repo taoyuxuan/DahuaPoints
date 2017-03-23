@@ -12,6 +12,13 @@ private var cookies: Dictionary<String, Any>? = nil
 
 class DahuaPointsMgr {
     class func GetPoints(accounts: Dictionary<String, String>) {
+        
+        let decodeStr = EncryptUtil.base64Decode(string: "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5gsH+AA4XWONB5TDcUd+xCz7ejOFHZKlcZDx+pF1i7Gsvi1vjyJoQhRtRSn950x498VUkx7rUxg1/ScBVfrRxQOZ8xFBye3pjAzfb22+RCuYApSVpJ3OO3KsEuKExftz9oFBv3ejxPlYc5yq7YiBO8XlTnQN0Sa4R4qhPO3I2MQIDAQAB")
+        
+        let data = EncryptUtil.parse(data: decodeStr)
+        
+        print(data)
+        /*
         HTTPCookieStorage.shared.cookieAcceptPolicy = .always
         for (account, passowrd) in accounts {
             print("account: \(account)")
@@ -39,6 +46,7 @@ class DahuaPointsMgr {
                 
             }
         }
+ */
     }
 }
 
