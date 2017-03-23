@@ -35,16 +35,21 @@ var ASN1Data = function(t) { this.error = !1;
                 if (r > 1) n = n << 8 | t.charCodeAt(1);
                 if (r > 2) { this.error = !0;
                     return null }
-                t = t.substr(r) } else { n = t.charCodeAt(0);
-                t = t.substr(1) }
+                t = t.substr(r) 
+            } else { 
+                n = t.charCodeAt(0);
+                t = t.substr(1) 
+            }
             var s = "";
             if (n) {
                 if (n > t.length) { this.error = !0;
                     return null }
                 s = t.substr(0, n);
-                t = t.substr(n) }
+                t = t.substr(n) 
+            }
             if (32 & i) e.push(this.parse(s));
-            else e.push(this.value(128 & i ? 4 : 31 & i, s)) }
+            else e.push(this.value(128 & i ? 4 : 31 & i, s)) 
+        }
         return e };
     this.value = function(t, e) {
         if (1 == t) return e ? !0 : !1;
@@ -69,9 +74,13 @@ var ASN1Data = function(t) { this.error = !1;
                     for (_ = 0; _ < r.length; _++) c += r[_] * Math.pow(128, s--);
                     i.push(c);
                     s = 0;
-                    r = [] } }
-            return i.join(".") }
-        return null };
+                    r = [] 
+                } 
+            }
+            return i.join(".") 
+        }
+        return null 
+    };
     this.data = this.parse(t) };
 
 var RSA = { 
