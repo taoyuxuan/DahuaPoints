@@ -123,17 +123,35 @@ class EncryptUtil {
     }
     
     class func base64Decode(string: String) -> String? {
-//        let data = string.data(using: String.Encoding.utf8)?.base64EncodedData(options: NSData.Base64EncodingOptions(rawValue: 0))
-//        
-//        guard let param = data else {
-//            return nil
-//        }
-//        
-//        return String(data: param, encoding: String.Encoding.utf8)
-        let decodedData = NSData(base64Encoded: string, options: .init(rawValue: 0))
-
-        let decodedString = NSString(data: decodedData as! Data, encoding: String.Encoding.utf8.rawValue)
+        let data = string.data(using: String.Encoding.utf8)?.base64EncodedData(options: NSData.Base64EncodingOptions(rawValue: 0))
         
-        return decodedString as? String
+        guard let param = data else {
+            return nil
+        }
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let filePath = path.appendingPathComponent("123.txt")
+        
+        do {
+            try data?.write(to: filePath, options: Data.WritingOptions.completeFileProtectionUnlessOpen)
+        } catch {
+            print(error)
+        }
+        
+        return String(data: param, encoding: String.Encoding.utf8)
+//        let decodedData = NSData(base64Encoded: string, options: .init(rawValue: 0))
+        
+//        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+//        let filePath = path.appendingPathComponent("123.txt")
+//        do {
+//            if let decodedData = decodedData {
+//                try decodedData.write(to: filePath, options: NSData.WritingOptions.atomicWrite)
+//            }
+//        } catch {
+//            print(error)
+//        }
+        
+//        let decodedString = NSString(data: decodedData as! Data, encoding: String.Encoding.utf8.rawValue)
+        
+//        return decodedString as? String
     }
 }

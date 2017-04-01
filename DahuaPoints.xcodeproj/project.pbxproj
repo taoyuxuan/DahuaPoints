@@ -12,6 +12,8 @@
 		2B17919D1E6D16FF009F9472 /* DlReg163API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B17919C1E6D16FF009F9472 /* DlReg163API.swift */; };
 		2B1791A01E6D1E17009F9472 /* GtRet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B17919F1E6D1E17009F9472 /* GtRet.swift */; };
 		2B1791A21E6D2023009F9472 /* IniRet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1791A11E6D2023009F9472 /* IniRet.swift */; };
+		2B1CC03C1E8A50F000CCAABA /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1CC03B1E8A50F000CCAABA /* String+Ext.swift */; };
+		2B1CC03F1E8B687100CCAABA /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1CC03E1E8B687100CCAABA /* TTTAttributedLabel.m */; };
 		2B93541A1E447EF300812200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9354191E447EF300812200 /* AppDelegate.swift */; };
 		2B93541C1E447EF300812200 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93541B1E447EF300812200 /* ViewController.swift */; };
 		2B93541F1E447EF300812200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B93541D1E447EF300812200 /* Main.storyboard */; };
@@ -21,6 +23,7 @@
 		2B93543A1E447EF300812200 /* DahuaPointsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9354391E447EF300812200 /* DahuaPointsUITests.swift */; };
 		2B93544B1E44859600812200 /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93544A1E44859600812200 /* NetManager.swift */; };
 		2B93544D1E4490FF00812200 /* DahuaPointsMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93544C1E4490FF00812200 /* DahuaPointsMgr.swift */; };
+		2B9ED8D41E8FBBE700730189 /* RSAEncryptUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9ED8D31E8FBBE700730189 /* RSAEncryptUtil.m */; };
 		2BDD0D3A1E55A7990059124E /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDD0D391E55A7990059124E /* Utility.m */; };
 		2BF0B9E21E79460000115855 /* EncryptUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0B9E11E79460000115855 /* EncryptUtil.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +50,9 @@
 		2B17919C1E6D16FF009F9472 /* DlReg163API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DlReg163API.swift; path = Net/DlReg163API.swift; sourceTree = "<group>"; };
 		2B17919F1E6D1E17009F9472 /* GtRet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GtRet.swift; path = Model/GtRet.swift; sourceTree = "<group>"; };
 		2B1791A11E6D2023009F9472 /* IniRet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IniRet.swift; sourceTree = "<group>"; };
+		2B1CC03B1E8A50F000CCAABA /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Ext.swift"; path = "Ext/String+Ext.swift"; sourceTree = "<group>"; };
+		2B1CC03D1E8B687100CCAABA /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		2B1CC03E1E8B687100CCAABA /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		2B9354161E447EF300812200 /* DahuaPoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DahuaPoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9354191E447EF300812200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B93541B1E447EF300812200 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +68,8 @@
 		2B93543B1E447EF300812200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B93544A1E44859600812200 /* NetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetManager.swift; path = Net/NetManager.swift; sourceTree = "<group>"; };
 		2B93544C1E4490FF00812200 /* DahuaPointsMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DahuaPointsMgr.swift; path = Manager/DahuaPointsMgr.swift; sourceTree = "<group>"; };
+		2B9ED8D21E8FBBE700730189 /* RSAEncryptUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSAEncryptUtil.h; path = Utility/RSAEncryptUtil.h; sourceTree = "<group>"; };
+		2B9ED8D31E8FBBE700730189 /* RSAEncryptUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSAEncryptUtil.m; path = Utility/RSAEncryptUtil.m; sourceTree = "<group>"; };
 		2BDD0D371E55A7990059124E /* DahuaPoints-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DahuaPoints-Bridging-Header.h"; sourceTree = "<group>"; };
 		2BDD0D381E55A7990059124E /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = Utility/Utility.h; sourceTree = "<group>"; };
 		2BDD0D391E55A7990059124E /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utility.m; path = Utility/Utility.m; sourceTree = "<group>"; };
@@ -106,6 +114,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		2B1CC03A1E8A50D800CCAABA /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				2B1CC03B1E8A50F000CCAABA /* String+Ext.swift */,
+			);
+			name = Ext;
+			sourceTree = "<group>";
+		};
 		2B93540D1E447EF300812200 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +147,9 @@
 		2B9354181E447EF300812200 /* DahuaPoints */ = {
 			isa = PBXGroup;
 			children = (
+				2B1CC03D1E8B687100CCAABA /* TTTAttributedLabel.h */,
+				2B1CC03E1E8B687100CCAABA /* TTTAttributedLabel.m */,
+				2B1CC03A1E8A50D800CCAABA /* Ext */,
 				2B17919E1E6D1E05009F9472 /* Model */,
 				2BDD0D361E55A78A0059124E /* Utility */,
 				2B9354491E44839000812200 /* Net */,
@@ -188,6 +207,8 @@
 				2BDD0D391E55A7990059124E /* Utility.m */,
 				2BDD0D371E55A7990059124E /* DahuaPoints-Bridging-Header.h */,
 				2BF0B9E11E79460000115855 /* EncryptUtil.swift */,
+				2B9ED8D21E8FBBE700730189 /* RSAEncryptUtil.h */,
+				2B9ED8D31E8FBBE700730189 /* RSAEncryptUtil.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -404,8 +425,11 @@
 				2B1791A01E6D1E17009F9472 /* GtRet.swift in Sources */,
 				2BDD0D3A1E55A7990059124E /* Utility.m in Sources */,
 				2BF0B9E21E79460000115855 /* EncryptUtil.swift in Sources */,
+				2B9ED8D41E8FBBE700730189 /* RSAEncryptUtil.m in Sources */,
 				2B0708F21E4B10EE0036C899 /* Ecard163API.swift in Sources */,
 				2B17919D1E6D16FF009F9472 /* DlReg163API.swift in Sources */,
+				2B1CC03C1E8A50F000CCAABA /* String+Ext.swift in Sources */,
+				2B1CC03F1E8B687100CCAABA /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

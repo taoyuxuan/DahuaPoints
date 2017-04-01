@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        testLinks()
         return true
     }
 
@@ -123,6 +124,25 @@ extension AppDelegate {
             }
         } catch {
             print(error)
+        }
+    }
+}
+
+extension AppDelegate {
+    func testLinks() {
+//        let text = "http://www.google.com. http://www.bla.com"
+        let text = "站内信消息按照时间先后顺序进行排列，最新的消息放下面，进入站内信页面默认定位到最下方消息；长按系统消息可以复制和删除；如果有新系统消息，站内信icon有红点显示；http://www.meme.chat后顺序进行排列 http://www.baidu.com后顺序进行排列"
+        
+        let attrs = text.getAllAccurateLinks()
+        guard let links = attrs else {
+            return
+        }
+        
+        for link in links {
+            let content = text as NSString
+            let value = content.substring(with: link.range)
+            print(value)
+            print(link.range)
         }
     }
 }
